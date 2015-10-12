@@ -1,4 +1,5 @@
 var classGraph = function(){
+
     this.ctx;
     this.tableId;
     this.canvasId;
@@ -263,7 +264,11 @@ classGraph.prototype.Init = function(pos_x, pos_y, width, height, border_width, 
     }
     classGraph.prototype.getVal = function()
     {
-        return parseFloat(this.$node.text());
+	var val = parseFloat(this.$node.text());
+	if(isNaN(val))
+		return 0;
+    else
+		return val;
     }
     classGraph.prototype.toLocalTime = function(timestamp)
     {
