@@ -14,6 +14,6 @@ this is how the file ends:
 ```
 Add this line:
 ```html
-<script type="text/javascript" src="Scripts/scrollGraph.js"></script>
+<script type="text/javascript" src="Scripts/scrollGraph.min.js"></script>
 ```
 Step 3. Test, find bugs, tell me. engels.vrc@gmail.com
