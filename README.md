@@ -2,8 +2,9 @@
 It enables the scrolling graphic object in WebReach
 
 # How to
-1. Paste the scrollGraph.min.js in (..)/system/WebReach/Scripts/
-2. Edit the "default" file (default.aspx):
+Step 1. Paste the scrollGraph.min.js in (..)/system/WebReach/Scripts/
+Step 2. Edit the "default" file (default.aspx):
+
 this is how the file ends:
 ```html
 <script type="text/javascript" src="Scripts/jquery.min.js"></script>
@@ -14,4 +15,4 @@ Add this line:
 ```html
 <script type="text/javascript" src="Scripts/scrollGraph.js"></script>
 ```
-3. Test, find bugs, tell me. engels.vrc@gmail.com
+Step 3. Test, find bugs, tell me. engels.vrc@gmail.com
