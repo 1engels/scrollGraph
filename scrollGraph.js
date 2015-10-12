@@ -50,6 +50,8 @@ classGraph.prototype.Init = function(pos_x, pos_y, width, height, border_width, 
     
     // write the title (label)
     this.buildTitle(label); 
+
+    // value !
     this.periodicTimer(tableId, label);
     this.yAxis();
     this.xAxis();  
@@ -57,6 +59,7 @@ classGraph.prototype.Init = function(pos_x, pos_y, width, height, border_width, 
     classGraph.prototype.buildTitle = function(label, value)
     {
         var value = value || '...';
+        label = this.$node.prev().prev().text();
         var label = label + ' : ' + value.toString();
         this.ctx.clearRect(this.yAxisWidth, 0, this.canvasWidth, this.titleHeight);
         this.ctx.fillStyle = '#000000';
@@ -276,13 +279,13 @@ classGraph.prototype.Init = function(pos_x, pos_y, width, height, border_width, 
 
 
 var x = [];
-$(document).on("ready",function(){
+$(document).ready(function(){
     // looking for Numeric Objects
     $("body").find("span[supplemental=NumericItem]").each(function(){
     var $table = $(this).closest('table');
     if($(this).attr('xpath').indexOf("dt='6'")>0)
     {
-        var label = $(this).prevAll(':eq(1)').text();
+        var label = $(this).prev().prev().text();
         tableId = Math.random().toString(36).substring(6);
         $(this).attr('id', tableId);
         var sG = new classGraph();
@@ -291,4 +294,3 @@ $(document).on("ready",function(){
     } 
     });
 });
-
