@@ -1,5 +1,5 @@
 # scrollGraph
-It enables the scrolling graphic object in WebReach
+It enables the scrolling graphic object in WebReach (v7.2.2)
 
 # How to
 Step 1. Paste the scrollGraph.min.js in (..)/system/WebReach/Scripts/
